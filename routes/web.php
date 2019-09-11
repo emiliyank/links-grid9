@@ -15,4 +15,4 @@ Route::get('/', 'GridController@index');
 Route::get('/create/{sequence}', 'GridController@create');
 Route::post('/grid', 'GridController@store');
 Route::get('/edit/{grid}', 'GridController@edit');
-Route::put('/grid-update/{grid}', 'GridController@update');
+Route::put('/grid/{grid}', 'GridController@update');

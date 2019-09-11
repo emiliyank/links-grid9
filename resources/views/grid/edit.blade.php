@@ -4,7 +4,7 @@
 <div class="container justify-content-center">
 
     @include('partials.validation_errors')
-	<form action=' {{ url("/grid-update/$gridItem->id") }}' method="post" class="form">
+	<form action=' {{ url("/grid/$gridItem->id") }}' method="post" class="form">
 		@csrf
         @method('PUT')
 
@@ -19,8 +19,8 @@
         </div>
      
         <div class="form-group row">
-        	<label for="color">Color: </label>
-        	<select name="color_id" class="form-control">
+        	<label for="color_id">Color: </label>
+        	<select name="color_id" id="color_id" class="form-control">
         		@foreach($colors as $color)
                     <?php $selected = $color->id == $gridItem->color_id ? 'selected' : '';  ?>
         			<option value="{{ $color->id }}" style="color:{{$color->hex_code}}" {{ $selected }}> {{ $color->name }} </option>

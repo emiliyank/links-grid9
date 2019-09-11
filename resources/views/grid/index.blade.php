@@ -12,7 +12,6 @@
 					</a>
 					<?php $id = $gridItems[$i]['id']; ?>
 					<a href='{{ url("/edit/$id") }}'><i class="fas fa-edit"></i>  </a>
-					
 				@else
 					<a href='{{ url("/create/$i") }}'> 
 						<i class="fas fa-plus-circle fa-7x"></i>

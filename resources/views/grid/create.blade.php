@@ -19,8 +19,8 @@
         </div>
      
         <div class="form-group row">
-        	<label for="color">Color: </label>
-        	<select name="color_id" class="form-control">
+        	<label for="color_id">Color: </label>
+        	<select name="color_id" id="color_id" class="form-control">
         		@foreach($colors as $color)
         			<option value="{{ $color->id }}" style="color:{{$color->hex_code}}"> {{ $color->name }} </option>
         		@endforeach
@@ -31,8 +31,6 @@
             <a href="{{ url('/') }}" class="btn btn-default"> Back </a>
         	<input type="submit" name="save" value="Save" class="btn btn-primary">
         </div>
-
-		
 	</form>
 </div>
 @endsection
